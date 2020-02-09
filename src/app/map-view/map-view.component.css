@@ -1,0 +1,240 @@
+/* hfhhhhvhvhvhvhvhvhvhvhvhvhvhvhvhvhvhvhhvhhvhvhvhvhvhvhvh */
+@media only screen and (min-width: 481px) {
+  .map-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 5px;
+  }
+
+  .map-frame {
+    position: relative;
+    border: 2px solid black;
+  }
+
+  #map {
+    float: left;
+    top: 0;
+    height: 70vh;
+    width: 60vw;
+    border: 2px solid;
+    z-index: -200;
+    margin-top: 1vw;
+    margin-bottom: 5vh;
+  }
+
+  .form {
+    float: right;
+    width: 29vw;
+    height: 36vh;
+    font-size: small;
+    /* border: dashed rgb(3, 9, 95) 2px; */
+    background-color: rgba(164, 219, 233, 0.76);
+    border-radius: 5px;
+    padding: 0.5vw;
+    margin: 1vw;
+  }
+
+  .selectorSet {
+    display: block;
+    margin-top: 10px;
+    width: 25vw;
+  }
+
+  .geoloc {
+    position: relative;
+    top: -45px;
+  }
+
+  .latlng {
+    position: relative;
+    top: 45px;
+  }
+
+  .inputSet {
+    width: 25vw;
+    float: left;
+    margin-top: 10px;
+  }
+  .inputSet div label {
+    display: inline-block;
+    width: 6vw;
+  }
+
+  .inputSet div {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-bottom: 5px;
+  }
+
+  .inputSet:disabled,
+  input:disabled {
+    color: rgb(156, 154, 154);
+    background-color: rgba(209, 37, 37, 0.322);
+  }
+
+  .coordInput {
+    position: relative;
+    top: 0;
+    left: 10px;
+    width: 15vw;
+  }
+
+  .submitCoord {
+    width: 26vw;
+    height: 3em;
+    border-radius: 5px;
+    margin: 1vw;
+  }
+
+  /* Feedback Styles */
+
+  .feedBack {
+    float: right;
+    border-radius: 5px;
+    width: 29vw;
+    height: 29vh;
+    font-size: small;
+    border: solid rgb(3, 9, 95) 2px;
+    margin: 1vw;
+
+    margin-bottom: 5vh;
+  }
+
+  .resultFed,
+  .historyFed {
+    position: relative;
+    height: 12vh;
+    width: 27vw;
+    border: 2px rgb(0, 0, 0) solid;
+    border-radius: 5px;
+    margin: 0.7vw;
+  }
+
+  .resultFed h3,
+  .historyFed h3 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-align: center;
+    font-size: small;
+  }
+
+  .result,
+  .history {
+    display: block;
+    width: 100%;
+    height: 8vh;
+    border-top: 1px rgb(0, 0, 0) solid;
+    font-size: small;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .map-container {
+    position: relative;
+    top: 10px;
+    left: 0;
+    margin: 5px;
+  }
+
+  .map-frame {
+    border: 2px solid black;
+    /* height: 100vh; */
+  }
+
+  #map {
+    position: relative;
+    top: 0;
+    height: 60vh;
+    border: 2px solid;
+  }
+
+  .feedBack {
+    position: relative;
+    top: 0;
+  }
+
+  .resultFed,
+  .historyFed {
+    /* display: inline-block; */
+    width: 88vw;
+    border: 2px rgb(0, 0, 0) solid;
+    margin: 2vw;
+  }
+
+  .historyFed {
+    margin-bottom: 30px;
+  }
+
+  .resultFed h3,
+  .historyFed h3 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-align: center;
+
+    font-size: small;
+  }
+
+  .result,
+  .history {
+    display: block;
+    width: 100%;
+    height: 7vh;
+    border: 1px rgb(0, 0, 0) solid;
+    font-size: small;
+  }
+
+  .form {
+    position: relative;
+    top: 0;
+    font-size: small;
+  }
+
+  .selectorSet {
+    /* display: inline-block; */
+    margin-top: 10px;
+  }
+
+  .geoloc {
+    position: relative;
+    top: -45px;
+  }
+
+  .latlng {
+    position: relative;
+    top: 45px;
+  }
+
+
+  .inputSet div label {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .inputSet {
+    width: 47vw;
+    float: left;
+    margin-top: 5px;
+  }
+
+  .inputSet:disabled,
+  input:disabled {
+    color: rgb(156, 154, 154);
+    background-color: rgba(209, 37, 37, 0.322);
+  }
+  .coordInput {
+    float: right;
+    width: 25vw;
+    margin-left: 3vw;
+  }
+
+  .submitCoord {
+    width: 35vw;
+    height: 5em;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+}

@@ -1,0 +1,88 @@
+<hr />
+<div>
+  <div class="col-left">
+    <div>
+      <form
+        #loginForm="ngForm"
+        (ngSubmit)="login(loginForm.value)"
+        autocomplete="off"
+        novalidate
+      >
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <em
+            *ngIf="
+              loginForm.controls.email?.invalid &&
+              (loginForm.controls.email?.touched || mouseoverLogin)
+            "
+            >Required</em
+          >
+          <input
+            (ngModel)="(email)"
+            name="email"
+            id="email"
+            type="text"
+            class="input form-control"
+            placeholder="Email..."
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <em
+            *ngIf="
+              loginForm.controls.password?.invalid &&
+              (loginForm.controls.password?.touched || mouseoverLogin)
+            "
+            >Required</em
+          >
+          <input
+            (ngModel)="(password)"
+            name="password"
+            id="password"
+            type="password"
+            class="input form-control"
+            placeholder="Password..."
+            required
+          />
+        </div>
+        <div class="form-group">
+          <span
+            (mouseenter)="mouseoverLogin = true"
+            (mouseleave)="mouseoverLogin = false"
+          >
+            <button
+              type="submit"
+              [disabled]="loginForm.invalid"
+              class="input btn btn-primary"
+            >
+              Login
+            </button>
+          </span>
+        </div>
+
+        <div class="orSignup">
+          <p [routerLink]="['/user/forgotPassword']">Forgot password?</p>
+          <p>Or</p>
+        </div>
+        <div class="form-group">
+          <div [routerLink]="['/user/sign-up']" class="input btn2 btn-primary">
+            Create an account
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-right">
+    <div class="col-right-container">
+      <div class="loginBackgroundImage1">
+        <div id="inscription">
+          <h1>Flooding is a Meniac</h1>
+          <p>Don't get caught by that meniac. Avoid flooding today</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<nav class="nav">
+  <section class="navbar">
+    <ul class="navList-left">
+      <li class="drop-down-toggle">
+        <a
+          [routerLink]="['/home']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
+      </li>
+      <li class="drop-down-toggle">
+        <a [routerLink]="['/events']" routerLinkActive="active">Events</a>
+      </li>
+    </ul>
+
+    <ul class="navList-right">
+      <li>
+        <a *ngIf="!auth.isAuthenticated()" [routerLink]="['/user/login']"
+          >Login/Sign Up</a
+        >
+        <section *ngIf="auth.isAuthenticated()" class="user-welcome">
+          <div>{{ auth.currentUser.userName }}</div>
+        </section>
+      </li>
+      <li *ngIf="auth.isAuthenticated()">
+        <a href="" routerLinkActive="active">Log out</a>
+      </li>
+    </ul>
+  </section>
+</nav>

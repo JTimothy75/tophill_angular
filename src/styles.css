@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~leaflet/dist/leaflet.css";
+
+@media only screen and (max-width: 480px) {
+  .legend {
+    width: 100%;
+    background-color: white;
+    line-height: 1.5em;
+    /* line-height: 1.5em; */
+  }
+
+  .legend i {
+    width: 1em;
+    height: 5px;
+    /* padding: 3px; */
+    margin: 3px;
+    float: left;
+    /* display: inline; */
+    /* display: inline-block; */
+    background-color: none;
+  }
+
+  .legend div {
+    /* padding: 3px; */
+    margin: 3px;
+    float: left;
+    /* display: inline; */
+    background-color: none;
+  }
+
+  /* .red .blue .green {
+  display: inline;
+  width: 5px;
+  } */
+}
+
+@media only screen and (min-width: 481px) {
+  .legend {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    line-height: 1.5em;
+  }
+
+  .legend i {
+    width: 1em;
+    height: 5px;
+    /* padding: 3px; */
+    margin: 3px;
+    float: left;
+    /* display: inline; */
+    /* display: inline-block; */
+    background-color: none;
+  }
+
+  .legend div {
+    /* padding: 3px; */
+    margin: 3px;
+    float: left;
+    /* display: inline; */
+    background-color: none;
+  }
+
+  /* .red .blue .green {
+  display: inline;
+  width: 5px;
+  } */
+}

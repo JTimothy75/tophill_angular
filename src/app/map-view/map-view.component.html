@@ -1,0 +1,76 @@
+<div class="map-container">
+  <div class="map-frame">
+    <div id="map"></div>
+
+    <form
+      #floodDataForm="ngForm"
+      class="form"
+      (ngSubmit)="getFloodInfo(floodDataForm.value)"
+    >
+      <fieldset class="selectorSet latlng">
+        <label for="inputCoord ">Input Latitude and longitude</label>
+        <input
+          [(ngModel)]="coordSource"
+          type="radio"
+          name="coordSource"
+          id="inputCoord"
+          value="InputCoord"
+        />
+      </fieldset>
+      <fieldset class="selectorSet geoloc">
+        <label for="useGeolocation"
+          >Use geolocation <em> <b> Recommended</b></em></label
+        >
+        <input
+          [(ngModel)]="coordSource"
+          type="radio"
+          name="coordSource"
+          id="useGeolocation"
+          value="UseGeolocation"
+          checked
+        />
+      </fieldset>
+      <fieldset
+        class="inputSet"
+        [disabled]="floodDataForm.value.coordSource === 'UseGeolocation'"
+      >
+        <div>
+          <label selected for="lat">Latitude</label>
+          <input
+            autocomplete="false"
+            class="coordInput"
+            [disabled]="floodDataForm.value.coordSource === 'UseGeolocation'"
+            (ngModel)="(lat)"
+            type="text"
+            name="lat"
+            id="lat"
+          />
+        </div>
+        <div>
+          <label selected for="lng">longitude</label>
+          <input
+            autocomplete="false"
+            class="coordInput"
+            [disabled]="floodDataForm.value.coordSource === 'UseGeolocation'"
+            (ngModel)="(lng)"
+            type="text"
+            name="lng"
+            id="lng"
+          />
+        </div>
+      </fieldset>
+      <button class="submitCoord" type="submit">getFloodInfo</button>
+    </form>
+
+    <div class="feedBack">
+      <div class="resultFed">
+        <h3>Result</h3>
+        <div class="result">{{ floodInfoResult?.proneOrNot }}</div>
+      </div>
+      <div class="historyFed">
+        <h3>History</h3>
+        <div class="history">{{ floodInfoResult?.history }}</div>
+      </div>
+    </div>
+  </div>
+</div>

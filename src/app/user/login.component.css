@@ -1,0 +1,256 @@
+@media only screen and (max-width: 480px) {
+  em {
+    float: right;
+    color: #e05c65;
+    padding-left: 10px;
+  }
+
+  .col-left {
+    float: left;
+    width: 40%;
+    font-family: Gotham SSm A, Gotham SSm B, sans-serif;
+  }
+
+  .loginBrand {
+    display: inline-block;
+  }
+
+  .center-vert {
+    /* margin-bottom: 50%; */
+    transform: translateY(-75%);
+  }
+
+  label {
+    float: left;
+  }
+
+  input {
+    display: block;
+  }
+  .element-group {
+    /* margin-top: 40px; */
+    margin-left: 50%;
+    transform: translateX(-25%);
+    width: 35vw;
+    height: 15vh;
+  }
+
+  .form-group {
+    margin-top: 40px;
+    margin-left: 50%;
+    transform: translateX(-37.5%);
+    width: 35vw;
+  }
+
+  .input {
+    width: 70%;
+    height: 2rem;
+    background-color: #dbc1c1;
+    margin-top: 5px;
+  }
+
+  .btn {
+    background-color: #f03131;
+    /* border: none; */
+  }
+
+  .btn2 {
+    text-align: center;
+    background-color: #f03131;
+    /* border: none; */
+    padding-top: 10px;
+  }
+  form {
+    margin-bottom: 40px;
+  }
+
+  .col-left {
+    float: left;
+    width: 100%;
+    font-family: Gotham SSm A, Gotham SSm B, sans-serif;
+  }
+
+  .form-group {
+    transform: translateX(-50%);
+    width: 80vw;
+  }
+
+  .col-right {
+    display: none;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .element-group {
+    /* margin-top: 40px; */
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 35vw;
+    height: 15vh;
+  }
+
+  .orSignup {
+    text-align: center;
+  }
+
+  .col-right {
+    float: right;
+    width: 60%;
+    font-family: Gotham SSm A, Gotham SSm B, sans-serif;
+  }
+
+  .col-right-container {
+    position: relative;
+    left: 0;
+  }
+
+  .loginBackgroundImage1::before {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 96vh;
+
+    background-image: url(/assets/images/flood1.jpg);
+    background-position: top;
+    background-size: cover;
+    opacity: 0.5;
+    content: "";
+    z-index: -5;
+  }
+
+  .loginBackgroundImage1 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 96vh;
+    z-index: 2;
+    border-left: 2px solid #000000;
+  }
+
+  #inscription {
+    margin-top: 50vh;
+    text-align: center;
+    transform: translateY(-50%);
+    background-color: rgba(4, 12, 49, 0.349);
+    padding: 20px;
+  }
+}
+
+/* --------------------------------------------------- */
+
+@media only screen and (min-width: 481px) {
+  em {
+    float: right;
+    color: #e05c65;
+    padding-right: 35%;
+  }
+
+  .col-left {
+    float: left;
+    width: 40%;
+    font-family: Gotham SSm A, Gotham SSm B, sans-serif;
+  }
+
+  .loginBrand {
+    display: inline-block;
+  }
+
+  .center-vert {
+    /* margin-bottom: 50%; */
+    transform: translateY(-75%);
+  }
+
+  label {
+    /* float: left; */
+    width: 150px;
+  }
+
+  input {
+    display: block;
+  }
+  .element-group {
+    /* margin-top: 40px; */
+    margin-left: 50%;
+    transform: translateX(-25%);
+    width: 35vw;
+    height: 15vh;
+  }
+
+  .form-group {
+    margin-top: 40px;
+    margin-left: 50%;
+    transform: translateX(-37.5%);
+    width: 35vw;
+  }
+
+  .input {
+    width: 65%;
+    height: 2rem;
+    background-color: #dbc1c1;
+    margin-top: 5px;
+  }
+
+  .btn {
+    background-color: #f03131;
+    /* border: none; */
+  }
+
+  .btn2 {
+    text-align: center;
+    background-color: #f03131;
+    /* border: none; */
+    padding-top: 10px;
+  }
+  form {
+    margin-bottom: 40px;
+  }
+
+  .orSignup {
+    text-align: center;
+    padding-right: 10%;
+  }
+
+  .col-right {
+    float: right;
+    width: 60%;
+    font-family: Gotham SSm A, Gotham SSm B, sans-serif;
+  }
+
+  .col-right-container {
+    position: relative;
+    left: 0;
+  }
+
+  .loginBackgroundImage1::before {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 96vh;
+
+    background-image: url(/assets/images/flood1.jpg);
+    background-position: top;
+    background-size: cover;
+    opacity: 0.5;
+    content: "";
+    z-index: -5;
+  }
+
+  .loginBackgroundImage1 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 96vh;
+    z-index: 2;
+    border-left: 2px solid #000000;
+  }
+
+  #inscription {
+    margin-top: 50vh;
+    text-align: center;
+    transform: translateY(-50%);
+    background-color: rgba(4, 12, 49, 0.349);
+    padding: 20px;
+  }
+}
