@@ -97,9 +97,15 @@ export class MapViewComponent implements AfterViewInit, OnInit {
   };
 
   zoomToLocationAndGetFloodInfo(lat, lng) {
+    let circle = L.circle([lat, lng], {
+      color: "blue",
+      fillColor: "#f03",
+      fillOpacity: 0.8,
+      radius: 50
+    }).addTo(this.map);
     console.log(lat, lng);
     this.map.setView([lat, lng], 15);
-    L.marker([lat, lng]).addTo(this.map);
+    let marker = L.marker([lat, lng]).addTo(this.map);
 
     if (this.auth.isAuthenticated()) {
       this.mapDataService.getFloodPronePlusHistory(lat, lng).subscribe({
