@@ -134,7 +134,7 @@ export class MapViewComponent implements AfterViewInit, OnInit {
     this.legend.onAdd = function(map: any) {
       let div = L.DomUtil.create("div", "legend");
       let labels = ["L.G.A", "Ward", "Flood prone area"];
-      let grades = ["green", "blue", "red"];
+      let grades = ["0f0", "00f", "f00"];
       div.innerHTML = "<div><b>Legend</b></div>";
       // grades.forEach(el => {
       for (let i = 0; i < grades.length; i++) {
@@ -143,6 +143,7 @@ export class MapViewComponent implements AfterViewInit, OnInit {
           '<i class="' +
           grades[i] +
           '" style="border: 2px solid' +
+          "#" +
           grades[i] +
           '">&nbsp;&nbsp;</i>&nbsp;&nbsp;' +
           labels[i] +
