@@ -134,7 +134,7 @@ export class MapViewComponent implements AfterViewInit, OnInit {
     this.legend.onAdd = function(map: any) {
       let div = L.DomUtil.create("div", "legend");
       let labels = ["L.G.A", "Ward", "Flood prone area"];
-      let grades = ["#0f0", "#00f", "#f00"];
+      let grades = ["green", "blue", "red"];
       div.innerHTML = "<div><b>Legend</b></div>";
       // grades.forEach(el => {
       for (let i = 0; i < grades.length; i++) {
@@ -201,7 +201,7 @@ export class MapViewComponent implements AfterViewInit, OnInit {
             return {
               color: "#f00",
               weight: 1,
-              fillOpacity: 0.5
+              fillOpacity: 0.3
             };
           }
         }).addTo(this.map);
