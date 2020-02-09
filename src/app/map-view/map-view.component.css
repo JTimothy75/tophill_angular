@@ -210,13 +210,13 @@
   .inputSet div label {
     display: inline-block;
     margin-top: 5px;
-    margin-bottom: 15px;
   }
 
   .inputSet {
     width: 47vw;
     float: left;
     margin-top: 5px;
+    margin-bottom: 10px;
   }
 
   .inputSet:disabled,
