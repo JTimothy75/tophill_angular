@@ -200,8 +200,8 @@ export class MapViewComponent implements AfterViewInit, OnInit {
           style: function(feature: any) {
             return {
               color: "#f00",
-              weight: 0.5,
-              fillOpacity: 0.6
+              weight: 1,
+              fillOpacity: 0.5
             };
           }
         }).addTo(this.map);

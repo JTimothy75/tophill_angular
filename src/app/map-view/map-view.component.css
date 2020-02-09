@@ -153,7 +153,7 @@
   .feedBack {
     position: relative;
     top: 0;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   .resultFed,
@@ -209,31 +209,32 @@
 
   .inputSet div label {
     display: inline-block;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 
   .inputSet {
     width: 47vw;
     float: left;
     margin-top: 5px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
   }
 
   .inputSet:disabled,
   input:disabled {
     color: rgb(156, 154, 154);
     background-color: rgba(209, 37, 37, 0.322);
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
   }
   .coordInput {
     float: right;
     width: 25vw;
+    height: 1.5em;
     margin-left: 3vw;
   }
 
   .submitCoord {
     width: 35vw;
-    height: 5em;
+    height: 6em;
     border-radius: 5px;
     margin-top: 5px;
     margin-left: 5px;
