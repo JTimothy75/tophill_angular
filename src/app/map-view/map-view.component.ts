@@ -160,8 +160,8 @@ export class MapViewComponent implements AfterViewInit, OnInit {
           style: function(feature: any) {
             return {
               color: "#0f0",
-              weight: 3
-              fillOpacity: 0.1,
+              weight: 3,
+              fillOpacity: 0.1
             };
           }
         }).addTo(this.map);
@@ -179,7 +179,7 @@ export class MapViewComponent implements AfterViewInit, OnInit {
             return {
               // color: "#0f0",
               weight: 1.5,
-              fillOpacity: 0.1,
+              fillOpacity: 0.1
             };
           }
         })
@@ -200,8 +200,8 @@ export class MapViewComponent implements AfterViewInit, OnInit {
           style: function(feature: any) {
             return {
               color: "#f00",
-              weight: 0.5
-              fillOpacity: 0.6,
+              weight: 0.5,
+              fillOpacity: 0.6
             };
           }
         }).addTo(this.map);
