@@ -101,11 +101,11 @@ export class MapViewComponent implements AfterViewInit, OnInit {
       color: "blue",
       fillColor: "#f03",
       fillOpacity: 0.8,
-      radius: 50
+      radius: 20
     }).addTo(this.map);
-    console.log(lat, lng);
-    this.map.setView([lat, lng], 15);
     let marker = L.marker([lat, lng]).addTo(this.map);
+    circle.bindPopup("Your Location.");
+    this.map.setView([lat, lng], 15);
 
     if (this.auth.isAuthenticated()) {
       this.mapDataService.getFloodPronePlusHistory(lat, lng).subscribe({

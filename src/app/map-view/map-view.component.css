@@ -65,13 +65,14 @@
     position: relative;
     top: 0;
     right: 0;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
 
   .inputSet:disabled,
   input:disabled {
     color: rgb(156, 154, 154);
     background-color: rgba(209, 37, 37, 0.322);
+    margin-bottom: 15px;
   }
 
   .coordInput {
@@ -205,7 +206,6 @@
     position: relative;
     top: 45px;
   }
-
 
   .inputSet div label {
     display: inline-block;
