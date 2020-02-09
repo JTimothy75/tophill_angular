@@ -97,14 +97,15 @@ export class MapViewComponent implements AfterViewInit, OnInit {
   };
 
   zoomToLocationAndGetFloodInfo(lat, lng) {
+    let marker = L.marker([lat, lng]).addTo(this.map);
     let circle = L.circle([lat, lng], {
       color: "blue",
       fillColor: "#f03",
       fillOpacity: 0.8,
       radius: 20
     }).addTo(this.map);
-    let marker = L.marker([lat, lng]).addTo(this.map);
-    circle.bindPopup("Your Location.");
+    // let marker = L.marker([lat, lng]).addTo(this.map);
+    marker.bindPopup("Your Location.");
     this.map.setView([lat, lng], 15);
 
     if (this.auth.isAuthenticated()) {
