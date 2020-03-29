@@ -15,6 +15,8 @@ export class AuthService {
   private domain: string = "https://sleepy-peak-69882.herokuapp.com";
   private signupUrl = `${this.domain}/api/v1/user/signup`;
   private loginUrl = `${this.domain}/api/v1/user/login`;
+  private logoutUrl = `${this.domain}/api/v1/user/logout`;
+  private isLoggedInUrl = `${this.domain}/api/v1/user/isLoggedIn`;
   private forgotPasswordUrl = `${this.domain}/api/v1/user/forgotPassword`;
   private updateMyPasswordUrl = `${this.domain}/api/v1/user/updateMyPassword`;
   private resetPasswordUrl = `${this.domain}/api/v1/user/resetPassword`;
@@ -127,9 +129,22 @@ export class AuthService {
     return !!this.currentUser;
   }
 
-  // checkAutheticationStatus(){
+  checkAutheticationStatus() {
+    this.http.get<any>(this.isLoggedInUrl).pipe(
+      tap(data => {
+        if (data instanceof Object) {
+          this.currentUser = data.data.user;
+        }
+      })
+    );
+  }
 
-  // }
+  logout() {
+    // let options = {
+    //   headers: new HttpHeaders({ "Content-Type": "application/json" })
+    // };
+    return this.http.get(this.logoutUrl);
+  }
 
   private handleError(err: HttpErrorResponse) {
     let errorMessage = "";

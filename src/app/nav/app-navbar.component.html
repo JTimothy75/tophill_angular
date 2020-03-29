@@ -24,7 +24,7 @@
         </section>
       </li>
       <li *ngIf="auth.isAuthenticated()">
-        <a href="" routerLinkActive="active">Log out</a>
+        <a routerLinkActive="active" (click)="(logout)">Logout</a>
       </li>
     </ul>
   </section>

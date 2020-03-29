@@ -10,6 +10,6 @@ export class AppComponent {
   title = "Tophillgeohydro";
   constructor(private auth: AuthService) {}
   ngOnit() {
-    // this.auth.checkAutheticationStatus();
+    this.auth.checkAutheticationStatus();
   }
 }
