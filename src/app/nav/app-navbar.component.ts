@@ -8,11 +8,11 @@ import { AuthService } from "../user/auth.service";
   styleUrls: ["./app-navbar.component.css"]
 })
 export class AppNavBarComponent implements OnInit {
-  constructor(private router: Router, public authService: AuthService) {}
+  constructor(private router: Router, public auth: AuthService) {}
 
   ngOnInit() {}
   logout() {
-    this.authService.logout().subscribe(() => {
+    this.auth.logout().subscribe(() => {
       this.router.navigate(["/home"]);
     });
   }
