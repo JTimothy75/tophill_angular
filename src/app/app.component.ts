@@ -8,8 +8,8 @@ import { AuthService } from "./user/auth.service";
 })
 export class AppComponent {
   title = "Tophillgeohydro";
-  constructor(private auth: AuthService) {}
+  constructor(private authService: AuthService) {}
   ngOnit() {
-    this.auth.checkAutheticationStatus();
+    this.authService.checkAutheticationStatus();
   }
 }
