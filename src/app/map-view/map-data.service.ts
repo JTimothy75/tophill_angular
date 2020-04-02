@@ -9,21 +9,22 @@ import { IGeodata } from "./geodata";
 })
 export class MapDataService {
   private domain: string = "https://sleepy-peak-69882.herokuapp.com";
+  // private domain: string = "http://127.0.0.1:4000";
 
-  // private elevenLGAUrl = `${this.domain}/api/v1/geodata/elevenLGA`;
-  // private wardUrl = `${this.domain}/api/v1/geodata/ward`;
-  // private floodProneAreaUrl = `${this.domain}/api/v1/geodata/floodProneArea`;
-  // private floodProneUrl = `${this.domain}/api/v1/floodGeodata/floodProne/coordinate`;
-  // private floodPronePlusHistoryUrl = `${this.domain}/api/v1/floodGeodata/floodPronePlusHistory/coordinate`;
+  private elevenLGAUrl = `${this.domain}/api/v1/geodata/elevenLGA`;
+  private wardUrl = `${this.domain}/api/v1/geodata/ward`;
+  private floodProneAreaUrl = `${this.domain}/api/v1/geodata/floodProneArea`;
+  private floodProneUrl = `${this.domain}/api/v1/floodGeodata/floodProne/coordinate`;
+  private floodPronePlusHistoryUrl = `${this.domain}/api/v1/floodGeodata/floodPronePlusHistory/coordinate`;
 
   // ================================
 
-  private elevenLGAUrl = "/api/v1/geodata/elevenLGA";
-  private wardUrl = "/api/v1/geodata/ward";
-  private floodProneAreaUrl = "/api/v1/geodata/floodProneArea";
-  private floodProneUrl = "/api/v1/floodGeodata/floodProne/coordinate";
-  private floodPronePlusHistoryUrl =
-    "/api/v1/floodGeodata/floodPronePlusHistory/coordinate";
+  // private elevenLGAUrl = "/api/v1/geodata/elevenLGA";
+  // private wardUrl = "/api/v1/geodata/ward";
+  // private floodProneAreaUrl = "/api/v1/geodata/floodProneArea";
+  // private floodProneUrl = "/api/v1/floodGeodata/floodProne/coordinate";
+  // private floodPronePlusHistoryUrl =
+  //   "/api/v1/floodGeodata/floodPronePlusHistory/coordinate";
 
   constructor(private http: HttpClient) {}
 

@@ -7,12 +7,14 @@ import {
 } from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
+import { CookieService } from "ngx-cookie-service";
 
 @Injectable({
   providedIn: "root"
 })
 export class AuthService {
   private domain: string = "https://sleepy-peak-69882.herokuapp.com";
+  // private domain: string = "http://127.0.0.1:4000";
   private signupUrl = `${this.domain}/api/v1/user/signup`;
   private loginUrl = `${this.domain}/api/v1/user/login`;
   private logoutUrl = `${this.domain}/api/v1/user/logout`;
@@ -33,7 +35,7 @@ export class AuthService {
 
   currentUser: IUser;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private cookieService: CookieService) {}
 
   signupUser(body): Observable<any> {
     let options = {
@@ -58,6 +60,7 @@ export class AuthService {
       .post<any>(this.loginUrl, loginInfo, options)
       .pipe(
         tap(data => {
+          this.cookieService.set("jwt", data.token, 30);
           this.currentUser = data.data.user;
           console.log(data);
         })
@@ -66,20 +69,6 @@ export class AuthService {
   }
 
   // /////////////////////////////////////////////
-
-  // login(body): Observable<IUser> {
-  //   let options = {
-  //     headers: new HttpHeaders({ "Content-Type": "application/json" })
-  //   };
-  //   console.log(body);
-
-  //   return this.http
-  //     .post<IUser>(this.loginUrl, body, options)
-  //     .pipe(
-  //       tap(data => console.log("All: " + JSON.stringify(data))),
-  //       catchError(this.handleError)
-  //     );
-  // }
 
   forgotPassword(body): Observable<IUser> {
     let options = {
@@ -130,20 +119,29 @@ export class AuthService {
   }
 
   checkAutheticationStatus() {
-    this.http.get<any>(this.isLoggedInUrl).pipe(
-      tap(data => {
-        if (data instanceof Object) {
-          this.currentUser = data.data.user;
-        }
+    return this.http
+      .get<any>("http://127.0.0.1:4000/api/v1/user/isLoggedIn", {
+        withCredentials: true
       })
-    );
+      .pipe(
+        tap(data => {
+          if (data instanceof Object) {
+            this.currentUser = data.data.user;
+            // console.log(data, "checking status");
+          }
+        })
+      )
+      .subscribe();
   }
 
   logout() {
-    // let options = {
-    //   headers: new HttpHeaders({ "Content-Type": "application/json" })
-    // };
-    return this.http.get(this.logoutUrl);
+    return this.http.get(this.logoutUrl).pipe(
+      tap(data => {
+        this.cookieService.delete("jwt");
+        this.currentUser = undefined;
+        // console.log(data);
+      })
+    );
   }
 
   private handleError(err: HttpErrorResponse) {

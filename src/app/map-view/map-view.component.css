@@ -102,10 +102,18 @@
     margin-bottom: 5vh;
   }
 
-  .resultFed,
+  .resultFed {
+    position: relative;
+    height: 10vh;
+    width: 27vw;
+    border: 2px rgb(0, 0, 0) solid;
+    border-radius: 5px;
+    margin: 0.7vw;
+  }
+
   .historyFed {
     position: relative;
-    height: 12vh;
+    height: 14vh;
     width: 27vw;
     border: 2px rgb(0, 0, 0) solid;
     border-radius: 5px;
@@ -120,13 +128,28 @@
     font-size: small;
   }
 
-  .result,
-  .history {
+  .result {
     display: block;
     width: 100%;
+    height: 7vh;
+    border-top: 1px rgb(0, 0, 0) solid;
+    font-size: small;
+    text-align: justify;
+  }
+
+  .history {
+    display: block;
+    width: 94%;
     height: 8vh;
     border-top: 1px rgb(0, 0, 0) solid;
     font-size: small;
+    text-align: justify;
+    overflow-y: scroll;
+    padding: 3%;
+  }
+
+  .history::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -177,13 +200,28 @@
     font-size: small;
   }
 
-  .result,
-  .history {
+  .result {
     display: block;
     width: 100%;
-    height: 7vh;
+    height: 6vh;
     border: 1px rgb(0, 0, 0) solid;
     font-size: small;
+    text-align: justify;
+  }
+
+  .history {
+    display: block;
+    width: 94%;
+    height: 9vh;
+    border: 1px rgb(0, 0, 0) solid;
+    font-size: small;
+    text-align: justify;
+    overflow-y: scroll;
+    padding: 3%;
+  }
+
+  .history::-webkit-scrollbar {
+    display: none;
   }
 
   .form {
