@@ -120,7 +120,7 @@ export class AuthService {
 
   checkAutheticationStatus() {
     return this.http
-      .get<any>("http://127.0.0.1:4000/api/v1/user/isLoggedIn", {
+      .get<any>(this.isLoggedInUrl, {
         withCredentials: true
       })
       .pipe(
